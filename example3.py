@@ -2,9 +2,6 @@ import ctypes
 import platform
 import serial
 import time
-
-import threading
-
 import cv2
 import numpy as np
 
@@ -107,7 +104,6 @@ if __name__ == "__main__":
             read_lines = ser.readline()
             read_lines_ctypes = makeCtypesPacket([x for x in read_lines])
             parserResult = Parser(read_lines_ctypes[0],read_lines_ctypes[1])
-            
             
             resultlist=[]
             
